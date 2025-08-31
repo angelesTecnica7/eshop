@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const endpoint = '../data/datos.json';
+    // const endpoint = '../data/datos.json';
 
     const getProductos = async () => {
-        try {
-            const res = await fetch(endpoint);
-            const datos = await res.json();
-            mostrarProducto(datos);
+        try{
+            const res = await fetch('../data/datos.json')
+            const datos = await res.json()
+            mostrarProducto(datos)
         } catch(error) {
-            console.log(error);
+            console.log('error');
 
         }
     }
